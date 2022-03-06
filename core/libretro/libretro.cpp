@@ -344,6 +344,10 @@ void retro_init(void)
       libretro_supports_bitmasks = true;
 
    init_disk_control_interface();
+
+   for(int i=0; i<4; i++) {
+      retro_set_controller_port_device(i, RETRO_DEVICE_JOYPAD);
+   }
 }
 
 void retro_deinit(void)
